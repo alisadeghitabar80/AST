@@ -2,10 +2,11 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AST | PORTFOLIO</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="turn.min.js"></script>
 </head>
 <body>
   <header>
@@ -13,21 +14,33 @@
   </header>
 
   <main>
-    <div class="flipbook" id="flipbook-container">
-      <!-- صفحات به‌صورت داینامیک لود می‌شن -->
+    <h1 class="title">PORTFOLIO</h1>
+    <div id="flipbook" class="flipbook">
+      <!-- pages will be inserted dynamically -->
     </div>
   </main>
 
   <script>
-    const container = document.getElementById("flipbook-container");
+    const flipbook = document.getElementById("flipbook");
     const totalPages = 93;
 
     for (let i = 1; i <= totalPages; i++) {
-      const page = document.createElement("img");
-      page.src = `pages/page${i}.jpg`;
-      page.classList.add("page");
-      container.appendChild(page);
+      const page = document.createElement("div");
+      const img = document.createElement("img");
+      img.src = `pages/page${i}.jpg`;
+      img.alt = `Page ${i}`;
+      img.className = "page-img";
+      page.appendChild(img);
+      flipbook.appendChild(page);
     }
+
+    window.onload = function() {
+      $('#flipbook').turn({
+        width: 960,
+        height: 640,
+        autoCenter: true
+      });
+    };
   </script>
 </body>
 </html>

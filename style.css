@@ -3,6 +3,8 @@ body {
   margin: 0;
   background-color: #111;
   font-family: Helvetica, sans-serif;
+  color: #fff;
+  direction: ltr;
 }
 
 header {
@@ -11,24 +13,26 @@ header {
 }
 
 .logo {
-  max-height: 80px;
+  max-height: 160px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+  margin-bottom: 2rem;
+  color: white;
 }
 
 .flipbook {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 1rem;
+  width: 960px;
+  height: 640px;
+  margin: 0 auto 4rem;
 }
 
-.page {
-  max-width: 90%;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  transition: transform 0.3s;
-}
-
-.page:hover {
-  transform: scale(1.01);
+.page-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
