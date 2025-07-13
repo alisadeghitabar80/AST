@@ -18,6 +18,35 @@
     <div id="flipbook" class="flipbook">
       <!-- pages will be inserted dynamically -->
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/blasten/turn.js@4/turn.min.js"></script>
+    <script>
+  const flipbook = document.getElementById("flipbook");
+  const totalPages = 93; // تعداد صفحات
+
+  for (let i = 1; i <= totalPages; i++) {
+    const page = document.createElement("div");
+    const img = document.createElement("img");
+    img.src = `pages/page${i}.jpg`;
+    img.alt = `Page ${i}`;
+    img.className = "page-img";
+    page.appendChild(img);
+    flipbook.appendChild(page);
+  }
+
+  $(window).on('load', function() {
+    $('#flipbook').turn({
+      width: 960,       // عرض کتاب
+      height: 640,      // ارتفاع کتاب
+      autoCenter: true,
+      elevation: 50,
+      gradients: true,
+      duration: 1000
+    });
+  });
+</script>
+
+
   </main>
 
   <script>
