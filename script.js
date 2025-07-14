@@ -1,4 +1,4 @@
-
+if (window.innerWidth >= 768) {
 document.querySelectorAll(".img-container").forEach(container => {
   const img = container.querySelector("img.zoomable");
   const lens = container.querySelector(".lens");
@@ -35,3 +35,4 @@ document.querySelectorAll(".img-container").forEach(container => {
     lens.style.display = "none";
   });
 });
+}
