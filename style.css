@@ -1,43 +1,37 @@
+
 body {
   margin: 0;
-  font-family: Helvetica, sans-serif;
   background-color: #121212;
   color: white;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
 }
-
 .logo {
   display: block;
-  margin: 2rem auto 0.5rem;
-  max-width: 800px;
-  height: auto;
+  margin: 2rem auto 1rem;
+  max-height: 120px;
 }
-
 .title {
-  text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  letter-spacing: 4px;
-  color: #ffffff;
+  margin-bottom: 2rem;
 }
-
 .gallery {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
-  gap: 2rem;
+  gap: 1.5rem;
+  padding: 1rem;
 }
-
 .gallery img {
   width: 90%;
-  max-width: 900px;
+  max-width: 600px;
   transition: transform 0.3s ease;
   border-radius: 12px;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
 }
-
 .gallery img:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
+  box-shadow: 0 0 10px #fff2;
 }
 .magnifier {
   position: absolute;
@@ -51,9 +45,8 @@ body {
   pointer-events: none;
   z-index: 10;
 }
-
 .magnifier img {
   position: absolute;
-  width: 200%; /* زوم 2x */
+  width: 200%;
   height: auto;
 }

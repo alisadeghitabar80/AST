@@ -1,3 +1,4 @@
+
 const gallery = document.querySelector('.gallery');
 const magnifier = document.getElementById('magnifier');
 const zoomImg = document.getElementById('zoom-img');
