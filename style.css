@@ -1,3 +1,4 @@
+
 body {
   background-color: #121212;
   color: white;
@@ -12,7 +13,7 @@ header {
 }
 
 .logo {
-  max-height: 800px;
+  max-height: 180px;
   margin: 0 auto 1rem;
   display: block;
   filter: drop-shadow(0 0 10px #ffffff33);
@@ -41,32 +42,25 @@ header {
   max-width: 100%;
   border-radius: 12px;
   box-shadow: 0 0 15px #00000088;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.5s ease;
+  transform-origin: center center;
+  cursor: zoom-in;
 }
 
 .page-img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 25px #ffffff33;
+  transform: scale(1.6);
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 0 30px #ffffff44;
 }
 
-/* Responsive: موبایل */
 @media (max-width: 768px) {
   .title {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
   }
 
-  .logo {
-    max-height: 140px;
-  }
-
-  .gallery {
-    padding: 1rem;
-    gap: 1.5rem;
-  }
-
-  .page-img {
-    width: 100%;
-    height: auto;
+  .page-img:hover {
+    transform: scale(1.2);
   }
 }
