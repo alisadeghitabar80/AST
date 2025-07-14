@@ -12,7 +12,7 @@ header {
 }
 
 .logo {
-  max-height: 800px;
+  max-height: 180px;
   margin: 0 auto 1rem;
   display: block;
   filter: drop-shadow(0 0 10px #ffffff33);
@@ -24,19 +24,21 @@ header {
   letter-spacing: 4px;
   text-shadow: 0 0 10px #ffffff22;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .gallery {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  padding: 2rem;
+  gap: 2rem;
+  padding: 1rem;
   max-width: 1000px;
   margin: auto;
 }
 
 .page-img {
   width: 100%;
+  max-width: 100%;
   border-radius: 12px;
   box-shadow: 0 0 15px #00000088;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -45,4 +47,26 @@ header {
 .page-img:hover {
   transform: scale(1.03);
   box-shadow: 0 0 25px #ffffff33;
+}
+
+/* Responsive: موبایل */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .logo {
+    max-height: 140px;
+  }
+
+  .gallery {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .page-img {
+    width: 100%;
+    height: auto;
+  }
 }
