@@ -1,6 +1,4 @@
 
-const lens = document.getElementById('lens');
-
 document.querySelectorAll(".img-container").forEach(container => {
   const img = container.querySelector("img.zoomable");
   const lens = container.querySelector(".lens");
