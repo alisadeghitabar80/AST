@@ -2,7 +2,7 @@
 const containers = document.querySelectorAll(".image-container");
 
 containers.forEach(container => {
-  const img = container.querySelector(".zoom-img");
+  const img = container.querySelector(".zoomable");
   const magnifier = container.querySelector(".magnifier");
 
   container.addEventListener("mousemove", e => {
