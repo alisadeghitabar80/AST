@@ -3,23 +3,34 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AST | PORTFOLIO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PORTFOLIO</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="AST Logo" class="logo">
+    <img src="logo.png" alt="Logo" class="logo" />
     <h1 class="title">PORTFOLIO</h1>
   </header>
 
   <main>
-    <div class="gallery"></div>
+    <div class="gallery">
+      <!-- 93 images -->
+      <!-- Example for 3, user will upload 93 -->
+      <div class="image-container">
+        <img src="pages/page1.jpg" class="zoom-img" />
+        <div class="magnifier"></div>
+      </div>
+      <div class="image-container">
+        <img src="pages/page2.jpg" class="zoom-img" />
+        <div class="magnifier"></div>
+      </div>
+      <div class="image-container">
+        <img src="pages/page3.jpg" class="zoom-img" />
+        <div class="magnifier"></div>
+      </div>
+    </div>
   </main>
-
-  <div class="magnifier" id="magnifier">
-    <img id="zoom-img" />
-  </div>
 
   <script src="script.js"></script>
 </body>
