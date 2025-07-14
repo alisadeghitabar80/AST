@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  background-color: #111;
+  color: white;
+  font-family: Helvetica, sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+.logo {
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 3px;
+}
+
+main#gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+main img {
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+main img:nth-child(odd) {
+  animation-delay: 0.3s;
+}
+
+main img:nth-child(even) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
