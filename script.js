@@ -12,7 +12,7 @@ document.querySelectorAll('.zoomable').forEach(img => {
     lens.style.top = `${e.pageY - 75}px`;
 
     lens.style.backgroundImage = `url(${img.src})`;
-    lens.style.backgroundPosition = `-${x * 2 - 75}px -${y * 2 - 75}px`;
+    lens.style.backgroundPosition = `-${x * 2 - 200}px -${y * 2 - 200}px`;
   });
 
   img.addEventListener('mouseleave', () => {
