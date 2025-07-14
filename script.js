@@ -1,24 +1,24 @@
+
 document.querySelectorAll(".img-container").forEach(container => {
   const img = container.querySelector("img.zoomable");
   const lens = container.querySelector(".lens");
 
-  const zoom = 2; // میزان زوم
+  const zoom = 2;
 
-  lens.style.backgroundImage = `url('${img.src}')`;
-  lens.style.backgroundRepeat = "no-repeat";
-  lens.style.backgroundSize = `${img.width * zoom}px ${img.height * zoom}px`;
+  img.addEventListener("load", () => {
+    lens.style.backgroundImage = `url('${img.src}')`;
+    lens.style.backgroundRepeat = "no-repeat";
+    lens.style.backgroundSize = `${img.width * zoom}px ${img.height * zoom}px`;
+  });
 
   container.addEventListener("mousemove", (e) => {
     const rect = img.getBoundingClientRect();
-
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
     const lensSize = lens.offsetWidth / 2;
-
-    // جلوگیری از خروج لنز از تصویر
-    let lensX = Math.max(0, Math.min(x - lensSize, img.width - lens.offsetWidth));
-    let lensY = Math.max(0, Math.min(y - lensSize, img.height - lens.offsetHeight));
+    const lensX = x - lensSize;
+    const lensY = y - lensSize;
 
     lens.style.left = `${lensX}px`;
     lens.style.top = `${lensY}px`;
@@ -28,6 +28,7 @@ document.querySelectorAll(".img-container").forEach(container => {
     const bgY = y * zoom - lensSize;
 
     lens.style.backgroundPosition = `-${bgX}px -${bgY}px`;
+    lens.style.backgroundSize = `${img.width * zoom}px ${img.height * zoom}px`;
   });
 
   container.addEventListener("mouseleave", () => {
