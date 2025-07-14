@@ -16,11 +16,6 @@ header {
   max-height: 500px;
   margin-bottom: 1rem;
 }
-@media (max-width: 767px) {
-  .logo {
-  max-height: 75px;
-  margin-bottom: 1rem;
-  }
 
 h1 {
   font-size: 2rem;
