@@ -13,10 +13,8 @@ header {
 }
 
 .logo {
- if (window.innerWidth >= 768) {
-    max-height: 500px;
-    margin-bottom: 1rem;
-}
+    max-height: 100px;
+    margin-bottom: 0.5rem;
   }
 
 h1 {
