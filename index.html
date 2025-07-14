@@ -13,23 +13,19 @@
     <h1 class="title">PORTFOLIO</h1>
   </header>
 
-  <main>
-    <div class="gallery">
-      <!-- 93 images -->
-      <!-- Example for 3, user will upload 93 -->
-      <div class="image-container">
-        <img src="pages/page1.jpg" class="zoom-img" />
-        <div class="magnifier"></div>
-      </div>
-      <div class="image-container">
-        <img src="pages/page2.jpg" class="zoom-img" />
-        <div class="magnifier"></div>
-      </div>
-      <div class="image-container">
-        <img src="pages/page3.jpg" class="zoom-img" />
-        <div class="magnifier"></div>
-      </div>
-    </div>
+   <main class="gallery">
+    <script>
+      for (let i = 1; i <= 93; i++) {
+        document.write(`
+          <div class="image-wrapper">
+            <div class="magnifier-container">
+              <img src="pages/page${i}.jpg" alt="Page ${i}" class="zoomable">
+              <div class="magnifier-glass"></div>
+            </div>
+          </div>
+        `);
+      }
+    </script>
   </main>
 
   <script src="script.js"></script>
