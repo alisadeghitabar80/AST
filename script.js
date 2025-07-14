@@ -3,7 +3,7 @@ document.querySelectorAll(".img-container").forEach(container => {
   const img = container.querySelector("img.zoomable");
   const lens = container.querySelector(".lens");
 
-  const zoom = 3;
+  const zoom = 2.5;
 
   img.addEventListener("load", () => {
     lens.style.backgroundImage = `url('${img.src}')`;
