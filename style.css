@@ -1,46 +1,44 @@
 
 body {
-  background-color: #111;
-  color: white;
-  font-family: Helvetica, sans-serif;
   margin: 0;
-  padding: 0;
+  background-color: #1e1e1e;
+  color: white;
+  font-family: sans-serif;
+}
+header {
   text-align: center;
+  margin: 20px 0;
 }
 .logo {
-  height: 100px;
-  margin-top: 20px;
+  max-height: 100px;
 }
-.title {
-  font-size: 2rem;
-  margin-bottom: 20px;
+h1 {
+  margin-top: 10px;
+  font-size: 2em;
+  letter-spacing: 2px;
 }
-.gallery {
+#gallery {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
-  padding: 20px;
 }
-.image-container {
+.page {
+  width: 90vw;
+  max-width: 1000px;
+  margin: 20px 0;
   position: relative;
-  width: 80%;
-  max-width: 600px;
 }
-.zoom-img {
+.page img {
   width: 100%;
   display: block;
 }
-.magnifier {
+.lens {
   position: absolute;
-  border: 2px solid white;
+  border: 3px solid #fff;
   border-radius: 50%;
-  cursor: none;
   width: 150px;
   height: 150px;
   overflow: hidden;
-  display: none;
   pointer-events: none;
-  box-shadow: 0 0 10px rgba(255,255,255,0.3);
-  background-repeat: no-repeat;
+  display: none;
 }

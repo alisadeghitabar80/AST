@@ -1,31 +1,19 @@
-
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PORTFOLIO</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <img src="logo.png" alt="Logo" class="logo" />
-    <h1 class="title">PORTFOLIO</h1>
+    <h1>PORTFOLIO</h1>
   </header>
-
-  <main>
-    <div class="gallery">
-    <script>
-      for (let i = 1; i <= 93; i++) {
-      <div class="image-container">
-          <img src="pages/page${i}.jpg" alt="Page ${i}" class="zoom-img" />
-        <div class="magnifier"></div>
-      </div>
-    </div>
-        }
-      </script>
+  <main id="gallery">
+    <!-- Images injected via JS -->
   </main>
-
   <script src="script.js"></script>
 </body>
 </html>
