@@ -1,24 +1,25 @@
-document.querySelectorAll('.magnifier-container').forEach(container => {
-  const img = container.querySelector('img');
-  const magnifierGlass = container.querySelector('.magnifier-glass');
 
-  const zoom = 2.5; // میزان بزرگنمایی
+const containers = document.querySelectorAll(".image-container");
 
-  container.addEventListener('mousemove', function(e) {
+containers.forEach(container => {
+  const img = container.querySelector(".zoom-img");
+  const magnifier = container.querySelector(".magnifier");
+
+  container.addEventListener("mousemove", e => {
     const rect = img.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    magnifierGlass.style.display = 'block';
-    magnifierGlass.style.left = `${x - magnifierGlass.offsetWidth / 2}px`;
-    magnifierGlass.style.top = `${y - magnifierGlass.offsetHeight / 2}px`;
-    magnifierGlass.style.backgroundImage = `url('${img.src}')`;
-    magnifierGlass.style.backgroundRepeat = 'no-repeat';
-    magnifierGlass.style.backgroundSize = `${img.width * zoom}px ${img.height * zoom}px`;
-    magnifierGlass.style.backgroundPosition = `-${x * zoom - magnifierGlass.offsetWidth / 2}px -${y * zoom - magnifierGlass.offsetHeight / 2}px`;
+    const zoomLevel = 2;
+    magnifier.style.backgroundImage = `url('${img.src}')`;
+    magnifier.style.backgroundSize = `${img.width * zoomLevel}px ${img.height * zoomLevel}px`;
+    magnifier.style.backgroundPosition = `-${x * zoomLevel - 75}px -${y * zoomLevel - 75}px`;
+    magnifier.style.left = `${x - 75}px`;
+    magnifier.style.top = `${y - 75}px`;
+    magnifier.style.display = "block";
   });
 
-  container.addEventListener('mouseleave', () => {
-    magnifierGlass.style.display = 'none';
+  container.addEventListener("mouseleave", () => {
+    magnifier.style.display = "none";
   });
 });
