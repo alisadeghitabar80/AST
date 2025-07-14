@@ -1,77 +1,54 @@
-/* ✅ تنظیمات عمومی */
+
 body {
+  background-color: #121212;
+  color: white;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
   margin: 0;
   padding: 0;
-  background-color: #1a1a1a;
-  font-family: 'Helvetica', sans-serif;
-  color: #fff;
-  text-align: center;
 }
 
-/* ✅ لوگو و عنوان */
-header img {
-  max-width: 200px;
-  height: auto;
-  display: block;
-  margin: 2rem auto 0.5rem auto;
+header {
+  padding: 2rem 0 1rem;
+}
+
+.logo {
+  max-height: 100px;
+  margin-bottom: 1rem;
 }
 
 h1 {
   font-size: 2rem;
-  font-weight: bold;
-  margin: 0;
   letter-spacing: 2px;
-  color: #fff;
 }
 
-/* ✅ گالری عکس‌ها */
-.gallery {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  padding: 2rem;
 }
 
-.gallery img {
-  width: 90%;
-  max-width: 800px;
-  transition: transform 0.2s ease;
-  border-radius: 8px;
+.img-container {
+  position: relative;
+  margin: 2rem 0;
+  display: inline-block;
 }
 
-/* ✅ افکت روشنایی وقتی موس روی عکس میاد */
-.gallery img:hover {
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+.zoomable {
+  width: 95vw;
+  max-width: 1000px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.05);
 }
 
-/* ✅ افکت لنز فقط روی دسکتاپ */
-@media (min-width: 768px) {
-  .zoom-lens {
-    position: absolute;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    pointer-events: none;
-    box-shadow: 0 0 15px rgba(255,255,255,0.4);
-    display: none;
-    z-index: 100;
-    overflow: hidden;
-  }
-}
-
-/* ✅ موبایل - حذف افکت لنز */
-@media (max-width: 767px) {
-  .zoom-lens {
-    display: none !important;
-  }
-
-  .gallery img {
-    width: 95%;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
+.lens {
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: none;
+  pointer-events: none;
+  box-shadow: 0 0 30px rgba(255,255,255,0.4);
+  z-index: 10;
 }
