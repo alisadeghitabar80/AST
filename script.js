@@ -14,8 +14,8 @@ containers.forEach(container => {
     magnifier.style.backgroundImage = `url('${img.src}')`;
     magnifier.style.backgroundSize = `${img.width * zoomLevel}px ${img.height * zoomLevel}px`;
     magnifier.style.backgroundPosition = `-${x * zoomLevel - 170}px -${y * zoomLevel - 170}px`;
-    magnifier.style.left = `${x - 100}px`;
-    magnifier.style.top = `${y - 100}px`;
+    magnifier.style.left = `${x - 170}px`;
+    magnifier.style.top = `${y - 170}px`;
     magnifier.style.display = "block";
   });
 
