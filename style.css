@@ -39,3 +39,21 @@ body {
 .gallery img:hover {
   transform: scale(1.05);
 }
+.magnifier {
+  position: absolute;
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: none;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  display: none;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.magnifier img {
+  position: absolute;
+  width: 200%; /* زوم 2x */
+  height: auto;
+}
