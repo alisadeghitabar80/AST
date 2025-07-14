@@ -1,25 +1,21 @@
+document.querySelectorAll('.zoomable').forEach(img => {
+  const glass = img.parentElement.querySelector('.magnifier-glass');
 
-const containers = document.querySelectorAll(".image-container");
-
-containers.forEach(container => {
-  const img = container.querySelector(".zoom-img");
-  const magnifier = container.querySelector(".magnifier");
-
-  container.addEventListener("mousemove", e => {
+  img.addEventListener('mousemove', function(e) {
     const rect = img.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    const zoomLevel = 2;
-    magnifier.style.backgroundImage = `url('${img.src}')`;
-    magnifier.style.backgroundSize = `${img.width * zoomLevel}px ${img.height * zoomLevel}px`;
-    magnifier.style.backgroundPosition = `-${x * zoomLevel - 75}px -${y * zoomLevel - 75}px`;
-    magnifier.style.left = `${x - 75}px`;
-    magnifier.style.top = `${y - 75}px`;
-    magnifier.style.display = "block";
+    glass.style.display = 'block';
+    glass.style.left = (x - glass.offsetWidth / 2) + 'px';
+    glass.style.top = (y - glass.offsetHeight / 2) + 'px';
+    glass.style.backgroundImage = `url('${img.src}')`;
+    glass.style.backgroundRepeat = 'no-repeat';
+    glass.style.backgroundSize = (img.width * 2) + 'px ' + (img.height * 2) + 'px';
+    glass.style.backgroundPosition = `-${x * 2 - 50}px -${y * 2 - 50}px`;
   });
 
-  container.addEventListener("mouseleave", () => {
-    magnifier.style.display = "none";
+  img.addEventListener('mouseleave', () => {
+    glass.style.display = 'none';
   });
 });
