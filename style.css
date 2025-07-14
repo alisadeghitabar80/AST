@@ -48,29 +48,15 @@ main {
 
   .gallery {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .gallery img {
     width: 90%;
     height: auto;
   }
-}
 
-.zoomable {
-  width: 95vw;
-  max-width: 1000px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.05);
-}
-
-.lens {
-  position: absolute;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
-  display: none;
-  pointer-events: none;
-  box-shadow: 0 0 30px rgba(255,255,255,0.4);
-  z-index: 10;
+  .lens {
+    display: none !important; /* لنز در موبایل نمایش داده نشه */
+  }
 }
