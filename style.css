@@ -1,39 +1,32 @@
+
 body {
-  margin: 0;
-  font-family: sans-serif;
   background-color: #111;
   color: white;
-}
-
-header {
-  text-align: center;
-  padding: 2rem;
   font-family: Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
-
-.site-logo {
-  max-height: 120px;
-  margin-bottom: 1rem;
+.logo {
+  height: 100px;
+  margin-top: 20px;
 }
-
-h1 {
-  font-size: 2.5rem;
-  letter-spacing: 2px;
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
-
 .gallery {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  gap: 40px;
+  padding: 20px;
 }
-
-.image-wrapper {
-  margin: 2rem 0;
+.image-container {
   position: relative;
-  transition: transform 0.3s;
+  width: 80%;
+  max-width: 600px;
 }
-
 .image-wrapper:hover {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
@@ -43,22 +36,20 @@ h1 {
   height: auto;
   border-radius: 8px;
 }
-
-.magnifier-container {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
+.zoom-img {
+  width: 100%;
+  display: block;
 }
-
-.magnifier-glass {
+.magnifier {
   position: absolute;
-  border: 2px solid #ccc;
+  border: 2px solid white;
   border-radius: 50%;
   cursor: none;
   width: 150px;
   height: 150px;
+  overflow: hidden;
   display: none;
-  z-index: 10;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+  background-repeat: no-repeat;
 }
