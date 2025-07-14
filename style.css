@@ -20,7 +20,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  padding: 20px;
+  padding: 70px;
 }
 .image-container {
   position: relative;
